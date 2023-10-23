@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pomodox/utils.dart';
+import 'package:pomodox/widgets/timeoptions.dart';
+import 'package:pomodox/widgets/timercard.dart';
 
 class PomodoroScreen extends StatelessWidget {
   const PomodoroScreen({super.key});
@@ -18,7 +20,7 @@ class PomodoroScreen extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.refresh,
                 color: Colors.white54,
                 size: 24,
@@ -28,11 +30,17 @@ class PomodoroScreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
             child: Container(
               alignment: Alignment.center,
               child: Column(
-                children: [],
+                children: [
+                  const TimerCard(),
+                  const SizedBox(
+                    height: 22,
+                  ),
+                  TimeOpstions(),
+                ],
               ),
             ),
           ),
