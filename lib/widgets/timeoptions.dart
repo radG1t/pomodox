@@ -8,7 +8,8 @@ class TimeOpstions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        controller: ScrollController(initialScrollOffset: 165),
+        physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         child: Row(
           children: selectableTimes.map((time) {

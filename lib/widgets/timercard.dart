@@ -34,7 +34,7 @@ class TimerCard extends StatelessWidget {
                   ]),
               child: Center(
                 child: Text(
-                  '17',
+                  '25',
                   style: textStyle(70, Colors.redAccent, FontWeight.bold),
                 ),
               ),
