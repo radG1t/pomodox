@@ -5,6 +5,12 @@ class PomodoroScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return   Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.redAccent,
+        title: Text('Pomodox', style: ,),
+      ),
+    );
   }
 }
