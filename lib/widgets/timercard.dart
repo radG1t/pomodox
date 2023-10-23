@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:pomodox/timerservice.dart';
 import 'package:pomodox/utils.dart';
+import 'package:provider/provider.dart';
 
 class TimerCard extends StatelessWidget {
   const TimerCard({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<TimerService>(context);
+    final secounds = provider.currentDuration % 60;
     return Column(
       children: [
         Text(
@@ -34,7 +38,8 @@ class TimerCard extends StatelessWidget {
                   ]),
               child: Center(
                 child: Text(
-                  '25',
+                  (provider.currentDuration ~/ 60)
+                      .toString(), //61 -> 61~/60    61%60
                   style: textStyle(70, Colors.redAccent, FontWeight.bold),
                 ),
               ),
@@ -65,7 +70,9 @@ class TimerCard extends StatelessWidget {
                   ]),
               child: Center(
                 child: Text(
-                  '00',
+                  secounds == 0
+                      ? "${secounds.round()}0"
+                      : (secounds % 60).round().toString(),
                   style: textStyle(70, Colors.redAccent, FontWeight.bold),
                 ),
               ),
