@@ -33,10 +33,10 @@ class PomodoroScreen extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
             child: Container(
               alignment: Alignment.center,
-              child: Column(
+              child: const Column(
                 children: [
-                  const TimerCard(),
-                  const SizedBox(
+                  TimerCard(),
+                  SizedBox(
                     height: 22,
                   ),
                   TimeOpstions(),

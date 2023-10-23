@@ -12,7 +12,7 @@ class TimerCard extends StatelessWidget {
           'FOCUS',
           style: textStyle(35, Colors.white, FontWeight.w600),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Row(
@@ -29,7 +29,7 @@ class TimerCard extends StatelessWidget {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 4,
                       blurRadius: 4,
-                      offset: Offset(0, 2),
+                      offset: const Offset(0, 2),
                     ),
                   ]),
               child: Center(
@@ -39,14 +39,14 @@ class TimerCard extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Text(
               ':',
               style: textStyle(60, Colors.red.shade200, FontWeight.bold),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Container(
