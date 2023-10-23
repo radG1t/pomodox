@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:pomodox/PomodoroScreen.dart';
+import 'package:pomodox/timerservice.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider<TimerService>(
+    create: (_) => TimerService(),
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
