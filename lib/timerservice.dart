@@ -11,11 +11,16 @@ class TimerService extends ChangeNotifier {
   double currentDuration = 1500;
   double selectTime = 1500;
   bool timerPlaying = false;
-
+  int rounds = 0;
+  int goal = 0;
+  String currenState = 'Focus';
   void start() {
     timerPlaying = true;
     timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      currentDuration--;
+      if (currentDuration == 0) {
+        handleNextRound();
+      } else
+        currentDuration--;
       notifyListeners();
     });
   }
@@ -30,5 +35,25 @@ class TimerService extends ChangeNotifier {
     selectTime = seconds;
     currentDuration = seconds;
     notifyListeners();
+  }
+
+  void handleNextRound() {
+    if (currenState == 'Focus') {
+      currenState = "Break";
+      currentDuration = 300;
+      selectTime = 300;
+      rounds++;
+      goal++;
+    } else if (currenState == "Break") {
+      currenState = "Focus";
+      currentDuration = 1500;
+      selectTime = 1500;
+    } else if (currenState == "Focus" && rounds == 3) {
+      currenState = "Break";
+      currentDuration = 1500;
+      selectTime = 1500;
+      rounds++;
+      goal++;
+    }
   }
 }
