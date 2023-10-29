@@ -38,7 +38,7 @@ class TimerService extends ChangeNotifier {
   }
 
   void handleNextRound() {
-    if (currenState == 'Focus') {
+    if (currenState == 'Focus' && rounds != 3) {
       currenState = "Break";
       currentDuration = 4; // 300 300
       selectTime = 4;
