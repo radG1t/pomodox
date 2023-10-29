@@ -7,7 +7,7 @@ class TimerService extends ChangeNotifier {
 
   //TimerService({required this.timer});
   // @override       //* havaset be in tike bashe
-  Timer timer = Timer.periodic(Duration(seconds: 1), (timer) {});
+  Timer timer = Timer.periodic(const Duration(seconds: 1), (timer) {});
   double currentDuration = 10; //1500
   double selectTime = 10; //1500
   bool timerPlaying = false;
@@ -34,6 +34,15 @@ class TimerService extends ChangeNotifier {
   void selectedTime(double seconds) {
     selectTime = seconds;
     currentDuration = seconds;
+    notifyListeners();
+  }
+
+  void reset() {
+    timer.cancel();
+    currenState = "Focus";
+    currentDuration = selectTime = 1500;
+    rounds = goal = 0;
+    timerPlaying = false;
     notifyListeners();
   }
 

@@ -41,7 +41,8 @@ class TimeOpstions extends StatelessWidget {
                 child: Center(
                   child: Text((int.parse(time) ~/ 60).toString(),
                       style: int.parse(time) == provider.selectTime
-                          ? textStyle(22, Colors.redAccent, FontWeight.w700)
+                          ? textStyle(22, rednderColor(provider.currenState),
+                              FontWeight.w700)
                           : textStyle(22, Colors.white, FontWeight.w700)),
                 ),
               ),

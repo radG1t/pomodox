@@ -20,3 +20,11 @@ List selectableTimes = [
   '3300',
   '3600',
 ];
+
+Color rednderColor(String currentState) {
+  if (currentState == "Focus") {
+    return Colors.redAccent;
+  } else {
+    return Colors.lightBlueAccent;
+  }
+}
