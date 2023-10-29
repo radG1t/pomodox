@@ -13,7 +13,7 @@ class TimerCard extends StatelessWidget {
     return Column(
       children: [
         Text(
-          'FOCUS',
+          provider.currenState,
           style: textStyle(35, Colors.white, FontWeight.w600),
         ),
         const SizedBox(
