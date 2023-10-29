@@ -7,6 +7,7 @@ TextStyle textStyle(double size, Color color, FontWeight fw) {
 
 List selectableTimes = [
   //minutes in secounds
+  "0",
   '300',
   '600',
   '900',

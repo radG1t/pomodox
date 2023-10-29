@@ -10,7 +10,8 @@ class TimeOpstions extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<TimerService>(context);
     return SingleChildScrollView(
-        controller: ScrollController(initialScrollOffset: 165),
+        controller: ScrollController(
+            initialScrollOffset: 240), //change it later *******
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         child: Row(

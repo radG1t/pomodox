@@ -8,8 +8,8 @@ class TimerService extends ChangeNotifier {
   //TimerService({required this.timer});
   // @override       //* havaset be in tike bashe
   Timer timer = Timer.periodic(const Duration(seconds: 1), (timer) {});
-  double currentDuration = 10; //1500
-  double selectTime = 10; //1500
+  double currentDuration = 1500;
+  double selectTime = 1500;
   bool timerPlaying = false;
   int rounds = 0;
   int goal = 0;
@@ -49,24 +49,24 @@ class TimerService extends ChangeNotifier {
   void handleNextRound() {
     if (currenState == 'Focus' && rounds != 3) {
       currenState = "Break";
-      currentDuration = 4; // 300 300
-      selectTime = 4;
+      currentDuration = 300;
+      selectTime = 300;
       rounds++;
       goal++;
     } else if (currenState == "Break") {
       currenState = "Focus";
-      currentDuration = 5; // 1500 1500
-      selectTime = 5;
+      currentDuration = 1500;
+      selectTime = 1500;
     } else if (currenState == "Focus" && rounds == 3) {
       currenState = "LongBreak";
-      currentDuration = 3; //1500 1500
-      selectTime = 3;
+      currentDuration = 1500;
+      selectTime = 1500;
       rounds++;
       goal++;
     } else if (currenState == "LongBreak") {
       currenState = "Focus";
-      currentDuration = 10; //1500 1500
-      selectTime = 10;
+      currentDuration = 1500;
+      selectTime = 1500;
       rounds = 0;
     }
     notifyListeners();
