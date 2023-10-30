@@ -7,7 +7,7 @@ TextStyle textStyle(double size, Color color, FontWeight fw) {
 
 List selectableTimes = [
   //minutes in secounds
-  "0",
+
   '300',
   '600',
   '900',
@@ -24,7 +24,7 @@ List selectableTimes = [
 
 Color rednderColor(String currentState) {
   if (currentState == "Focus") {
-    return Colors.redAccent;
+    return Colors.black12;
   } else {
     return Colors.lightBlueAccent;
   }
