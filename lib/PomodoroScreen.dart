@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pomodox/timerservice.dart';
 import 'package:pomodox/utils.dart';
+import 'package:pomodox/widgets/magicCubes.dart';
+import 'package:pomodox/widgets/notebox.dart';
 import 'package:pomodox/widgets/progresswidget.dart';
 import 'package:pomodox/widgets/timecontroller.dart';
 import 'package:pomodox/widgets/timeoptions.dart';
-import 'package:pomodox/widgets/timercard.dart';
 import 'package:provider/provider.dart';
 
 class PomodoroScreen extends StatelessWidget {
@@ -36,12 +37,13 @@ class PomodoroScreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
+            padding: const EdgeInsets.fromLTRB(0, 50, 0, 12),
             child: Container(
               alignment: Alignment.center,
               child: const Column(
                 children: [
-                  TimerCard(),
+                  magicCubes(),
+                  // TimerCard(),
                   SizedBox(
                     height: 22,
                   ),
@@ -50,6 +52,10 @@ class PomodoroScreen extends StatelessWidget {
                     height: 40,
                   ),
                   TimeController(),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  noteBox(),
                   SizedBox(
                     height: 40,
                   ),

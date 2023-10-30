@@ -39,3 +39,34 @@ class _TimeControllerState extends State<TimeController> {
         ));
   }
 }
+/* 
+Container(
+        width: 80.0,
+        height: 80.0,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(100),
+          gradient: LinearGradient(
+            colors: [Color(0xFFFF8200), Color(0xFFFF2600)],
+            begin: Alignment(0.5, -1.0),
+            end: Alignment(0.5, 1.0),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Color(0xC1F3F4F6),
+              spreadRadius: 0,
+              blurRadius: 0,
+              offset: Offset(0, 0),
+            ),
+          ],
+        ),
+        child: Center(
+          child: Text(
+            'Button',
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
+    );
+ */ 

@@ -24,7 +24,7 @@ class TimerCard extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width / 3.2,
-              height: 175,
+              height: 165,
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(15),
@@ -57,7 +57,7 @@ class TimerCard extends StatelessWidget {
             ),
             Container(
               width: MediaQuery.of(context).size.width / 3.2,
-              height: 175,
+              height: 165,
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(15),
