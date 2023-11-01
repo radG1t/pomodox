@@ -55,6 +55,7 @@ class PomodoroScreen extends StatelessWidget {
                   SizedBox(
                     height: 12,
                   ),
+                  getRandomSentence(),
                   noteBox(),
                   SizedBox(
                     height: 40,
