@@ -53,12 +53,16 @@ class PomodoroScreen extends StatelessWidget {
                   ),
                   TimeController(),
                   SizedBox(
-                    height: 12,
+                    height: 20,
                   ),
                   getRandomSentence(),
-                  noteBox(),
                   SizedBox(
                     height: 40,
+                  ),
+
+                  noteBox(),
+                  SizedBox(
+                    height: 120,
                   ),
                   ProgressWidget(),
                 ],

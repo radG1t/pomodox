@@ -63,7 +63,10 @@ class getRandomSentence extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(workRandomSentence());
+    return Text(
+      workRandomSentence(),
+      style: textStyle(22, Colors.white, FontWeight.w700),
+    );
   }
 }
 // if focus page this randoms else those randoms
