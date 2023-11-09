@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 void main() {
   runApp(ChangeNotifierProvider<TimerService>(
     create: (_) => TimerService(),
-    child: MyApp(),
+    child: const MyApp(),
   ));
 }
 
