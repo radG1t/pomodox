@@ -60,7 +60,7 @@ class PomodoroScreen extends StatelessWidget {
                   SizedBox(
                     height: 40,
                   ),
-                  CubePainter(),
+                  Center(child: CubePainter()),
                   SizedBox(
                     height: 240, //value : 40
                   ),
