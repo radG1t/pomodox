@@ -43,7 +43,7 @@ class CubePainterClass extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final cubePaint = Paint()
-      ..color = Colors.green
+      ..color = Colors.white
       ..strokeWidth = 4;
 
     // Draw the cube

@@ -43,33 +43,33 @@ class PomodoroScreen extends StatelessWidget {
               alignment: Alignment.center,
               child: Column(
                 children: [
-                  magicCubes(),
+                  const magicCubes(),
                   // TimerCard(),
-                  SizedBox(
+                  const SizedBox(
                     height: 22,
                   ),
-                  TimeOpstions(),
-                  SizedBox(
+                  const TimeOpstions(),
+                  const SizedBox(
                     height: 40,
                   ),
-                  TimeController(),
-                  SizedBox(
+                  const TimeController(),
+                  const SizedBox(
                     height: 20,
                   ),
                   getRandomSentence(),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
-                  Center(child: CubePainter()),
-                  SizedBox(
+                  CubePainter(),
+                  const SizedBox(
                     height: 240, //value : 40
                   ),
-                  noteBox(),
-                  SizedBox(
+                  const noteBox(),
+                  const SizedBox(
                     height: 120,
                   ),
 
-                  ProgressWidget(),
+                  const ProgressWidget(),
                 ],
               ),
             ),

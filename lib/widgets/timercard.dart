@@ -23,6 +23,7 @@ class TimerCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
+              //min
               width: MediaQuery.of(context).size.width / 3.2,
               height: 165,
               decoration: BoxDecoration(
@@ -36,13 +37,26 @@ class TimerCard extends StatelessWidget {
                       offset: const Offset(0, 2),
                     ),
                   ]),
-              child: Center(
-                child: Text(
-                  (provider.currentDuration ~/ 60)
-                      .toString(), //61 -> 61~/60    61%60
-                  style: textStyle(
-                      70, rednderColor(provider.currenState), FontWeight.bold),
-                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    (provider.currentDuration ~/ 60)
+                        .toString(), //61 -> 61~/60    61%60
+                    style: textStyle(70, rednderColor(provider.currenState),
+                        FontWeight.bold),
+                  ),
+                  // const Expanded(
+                  //   child: SizedBox(),
+                  // ),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  Text(
+                    'Min',
+                    style: textStyle(12, Colors.grey, FontWeight.w300),
+                  ),
+                ],
               ),
             ),
             const SizedBox(
@@ -50,12 +64,13 @@ class TimerCard extends StatelessWidget {
             ),
             Text(
               ':',
-              style: textStyle(60, Colors.white70, FontWeight.bold),
+              style: textStyle(65, Colors.white70, FontWeight.bold),
             ),
             const SizedBox(
               width: 10,
             ),
             Container(
+              //sec
               width: MediaQuery.of(context).size.width / 3.2,
               height: 165,
               decoration: BoxDecoration(
@@ -70,12 +85,20 @@ class TimerCard extends StatelessWidget {
                     ),
                   ]),
               child: Center(
-                child: Text(
-                  secounds == 0
-                      ? "${secounds.round()}0"
-                      : (secounds % 60).round().toString(),
-                  style: textStyle(
-                      70, rednderColor(provider.currenState), FontWeight.bold),
+                child: Column(
+                  children: [
+                    Text(
+                      secounds == 0
+                          ? "${secounds.round()}0"
+                          : (secounds % 60).round().toString(),
+                      style: textStyle(70, rednderColor(provider.currenState),
+                          FontWeight.bold),
+                    ),
+                    Text(
+                      'Sec',
+                      style: textStyle(12, Colors.grey, FontWeight.w300),
+                    ),
+                  ],
                 ),
               ),
             ),
