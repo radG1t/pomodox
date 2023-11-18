@@ -56,13 +56,13 @@ class PomodoroScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  getRandomSentence(),
+                  const getRandomSentence(),
                   const SizedBox(
                     height: 40,
                   ),
-                  CubePainter(),
+                  //  CubePainter(),
                   const SizedBox(
-                    height: 240, //value : 40
+                    height: 40, //value : 240 for cube
                   ),
                   const noteBox(),
                   const SizedBox(
