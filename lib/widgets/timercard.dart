@@ -49,7 +49,7 @@ class TimerCard extends StatelessWidget {
                   // const Expanded(
                   //   child: SizedBox(),
                   // ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25,
                   ),
                   Text(
@@ -84,22 +84,24 @@ class TimerCard extends StatelessWidget {
                       offset: Offset(0, 2),
                     ),
                   ]),
-              child: Center(
-                child: Column(
-                  children: [
-                    Text(
-                      secounds == 0
-                          ? "${secounds.round()}0"
-                          : (secounds % 60).round().toString(),
-                      style: textStyle(70, rednderColor(provider.currenState),
-                          FontWeight.bold),
-                    ),
-                    Text(
-                      'Sec',
-                      style: textStyle(12, Colors.grey, FontWeight.w300),
-                    ),
-                  ],
-                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    secounds == 0
+                        ? "${secounds.round()}0"
+                        : (secounds % 60).round().toString(),
+                    style: textStyle(70, rednderColor(provider.currenState),
+                        FontWeight.bold),
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  Text(
+                    'Sec',
+                    style: textStyle(12, Colors.grey, FontWeight.w300),
+                  ),
+                ],
               ),
             ),
           ],
