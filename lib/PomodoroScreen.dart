@@ -10,45 +10,27 @@ import 'package:pomodox/widgets/timeoptions.dart';
 import 'package:pomodox/widgets/timercard.dart';
 import 'package:provider/provider.dart';
 
+//          decoration:
+//      BoxDecoration(gradient: BCrenderColor(provider.currenState)),
 class PomodoroScreen extends StatelessWidget {
   const PomodoroScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<TimerService>(context);
-    return Scaffold(
-      backgroundColor: rednderColor(provider.currenState),
-      /* appBar: AppBar(
-        elevation: 0,
-        backgroundColor: rednderColor(provider.currenState),
-        title: Center(
-          child: Text(
-            'Pomodox',
-            style: textStyle(24, Colors.white54, FontWeight.bold),
-          ),
-        ),
-        /*      actions: [
-          IconButton(
-              onPressed: () =>
-                  Provider.of<TimerService>(context, listen: false).reset(),
-              icon: const Icon(
-                Icons.refresh,
-                color: Colors.white54,
-                size: 24,
-              ))
-        ],
-   */
-      ),
-    */
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(0, 50, 0, 12),
-            child: Container(
-              alignment: Alignment.center,
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Container(
+            decoration:
+                BoxDecoration(gradient: BCrenderColor(provider.currenState)),
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(15, 50, 15, 20),
               child: Column(
                 children: [
                   magicCubes(),
+                  magicCubes(),
+
                   //timercards(),
                   SizedBox(
                     height: 22,
