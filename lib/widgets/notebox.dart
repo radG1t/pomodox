@@ -6,7 +6,7 @@ class noteBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
+      margin: const EdgeInsets.fromLTRB(15, 0, 15, 0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: const Color.fromRGBO(255, 255, 255, 0.498),
@@ -23,6 +23,7 @@ class noteBox extends StatelessWidget {
         cursorHeight: 18,
         autofillHints: Characters.empty,
         decoration: InputDecoration(
+          floatingLabelBehavior: FloatingLabelBehavior.never,
           labelText: ' any note :',
           labelStyle: TextStyle(color: Colors.black38),
           border: InputBorder.none,
