@@ -7,6 +7,7 @@ import 'package:pomodox/widgets/notebox.dart';
 import 'package:pomodox/widgets/progresswidget.dart';
 import 'package:pomodox/widgets/timecontroller.dart';
 import 'package:pomodox/widgets/timeoptions.dart';
+import 'package:pomodox/widgets/timercard.dart';
 import 'package:provider/provider.dart';
 
 class PomodoroScreen extends StatelessWidget {
@@ -17,14 +18,16 @@ class PomodoroScreen extends StatelessWidget {
     final provider = Provider.of<TimerService>(context);
     return Scaffold(
       backgroundColor: rednderColor(provider.currenState),
-      appBar: AppBar(
+      /* appBar: AppBar(
         elevation: 0,
         backgroundColor: rednderColor(provider.currenState),
-        title: Text(
-          'Pomodox',
-          style: textStyle(24, Colors.white54, FontWeight.bold),
+        title: Center(
+          child: Text(
+            'Pomodox',
+            style: textStyle(24, Colors.white54, FontWeight.bold),
+          ),
         ),
-        actions: [
+        /*      actions: [
           IconButton(
               onPressed: () =>
                   Provider.of<TimerService>(context, listen: false).reset(),
@@ -34,7 +37,9 @@ class PomodoroScreen extends StatelessWidget {
                 size: 24,
               ))
         ],
+   */
       ),
+    */
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -43,33 +48,47 @@ class PomodoroScreen extends StatelessWidget {
               alignment: Alignment.center,
               child: Column(
                 children: [
-                  const magicCubes(),
-                  // TimerCard(),
-                  const SizedBox(
+                  magicCubes(),
+                  //timercards(),
+                  SizedBox(
                     height: 22,
                   ),
-                  const TimeOpstions(),
-                  const SizedBox(
+                  TimeOpstions(),
+                  SizedBox(
                     height: 40,
                   ),
-                  const TimeController(),
-                  const SizedBox(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TimeController(),
+                      IconButton(
+                          onPressed: () =>
+                              Provider.of<TimerService>(context, listen: false)
+                                  .reset(),
+                          icon: const Icon(
+                            Icons.refresh,
+                            color: Colors.white54,
+                            size: 24,
+                          ))
+                    ],
+                  ),
+                  SizedBox(
                     height: 20,
                   ),
-                  const getRandomSentence(),
-                  const SizedBox(
+                  getRandomSentence(),
+                  SizedBox(
                     height: 40,
                   ),
                   //  CubePainter(),
-                  const SizedBox(
+                  SizedBox(
                     height: 40, //value : 240 for cube
                   ),
-                  const noteBox(),
-                  const SizedBox(
+                  noteBox(),
+                  SizedBox(
                     height: 120,
                   ),
 
-                  const ProgressWidget(),
+                  ProgressWidget(),
                 ],
               ),
             ),
