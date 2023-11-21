@@ -33,8 +33,8 @@ Color OBJrednderColor(String currentState) {
 
 LinearGradient BCrenderColor(String currentState) {
   if (currentState == "Focus") {
-    Color bluenova = Color(0xFF001F3F);
-    Color somebluenova = Color.fromARGB(255, 7, 79, 151);
+    Color bluenova = const Color(0xFF001F3F);
+    Color somebluenova = const Color.fromARGB(255, 7, 79, 151);
     return LinearGradient(
         colors: [somebluenova, bluenova],
         begin: Alignment.topCenter,
@@ -42,14 +42,14 @@ LinearGradient BCrenderColor(String currentState) {
         tileMode: TileMode.clamp);
   } else {
     // You might want to return a default gradient or handle this case differently
-    return LinearGradient(
-      colors: [
-        Colors.lightBlueAccent,
-        const Color.fromARGB(255, 134, 147, 153)
-      ],
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-    );
+    return const LinearGradient(
+        colors: [
+          Color.fromARGB(255, 4, 99, 30),
+          Color.fromARGB(255, 92, 126, 101)
+        ],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        tileMode: TileMode.clamp);
   }
 }
 

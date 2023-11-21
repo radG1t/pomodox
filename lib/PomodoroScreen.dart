@@ -3,6 +3,7 @@ import 'package:pomodox/timerservice.dart';
 import 'package:pomodox/utils.dart';
 import 'package:pomodox/widgets/customPaint.dart';
 import 'package:pomodox/widgets/magicCubes.dart';
+import 'package:pomodox/widgets/moreOptions.dart';
 import 'package:pomodox/widgets/notebox.dart';
 import 'package:pomodox/widgets/progresswidget.dart';
 import 'package:pomodox/widgets/timecontroller.dart';
@@ -57,7 +58,7 @@ class PomodoroScreen extends StatelessWidget {
                             ))
                       ],
                     ),
-                    const Column(
+                    Column(
                       children: [
                         SizedBox(
                           height: 20,
@@ -66,7 +67,12 @@ class PomodoroScreen extends StatelessWidget {
                         SizedBox(
                           height: 40,
                         ),
-                        //  CubePainter(),
+                        /* CubePainter(),
+                     SizedBox(
+                          height: 40, //value : 240 for cube
+                        ),
+                       */
+                        MoreOptions(),
                         SizedBox(
                           height: 40, //value : 240 for cube
                         ),
@@ -74,7 +80,6 @@ class PomodoroScreen extends StatelessWidget {
                         SizedBox(
                           height: 120,
                         ),
-
                         ProgressWidget(),
                       ],
                     ),
