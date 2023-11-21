@@ -22,6 +22,7 @@ class PomodoroScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Expanded(
             child: Container(
               decoration:
@@ -60,11 +61,11 @@ class PomodoroScreen extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        getRandomSentence(),
-                        SizedBox(
+                        const getRandomSentence(),
+                        const SizedBox(
                           height: 40,
                         ),
                         /* CubePainter(),
@@ -72,15 +73,19 @@ class PomodoroScreen extends StatelessWidget {
                           height: 40, //value : 240 for cube
                         ),
                        */
-                        MoreOptions(),
-                        SizedBox(
+                        Row(
+                          children: [
+                            MoreOptions(),
+                          ],
+                        ),
+                        const SizedBox(
                           height: 40, //value : 240 for cube
                         ),
-                        noteBox(),
-                        SizedBox(
+                        const noteBox(),
+                        const SizedBox(
                           height: 120,
                         ),
-                        ProgressWidget(),
+                        const ProgressWidget(),
                       ],
                     ),
                   ],
