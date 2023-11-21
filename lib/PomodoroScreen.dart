@@ -21,57 +21,65 @@ class PomodoroScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Container(
-            decoration:
-                BoxDecoration(gradient: BCrenderColor(provider.currenState)),
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(15, 50, 15, 20),
-              child: Column(
-                children: [
-                  magicCubes(),
-                  magicCubes(),
+          child: Expanded(
+            child: Container(
+              decoration:
+                  BoxDecoration(gradient: BCrenderColor(provider.currenState)),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(15, 50, 15, 20),
+                child: Column(
+                  children: [
+                    const Column(
+                      children: [
+                        TimerCard(),
+                        magicCubes(),
+                        SizedBox(
+                          height: 22,
+                        ),
+                        TimeOpstions(),
+                        SizedBox(
+                          height: 40,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const TimeController(),
+                        IconButton(
+                            onPressed: () => Provider.of<TimerService>(context,
+                                    listen: false)
+                                .reset(),
+                            icon: const Icon(
+                              Icons.refresh,
+                              color: Colors.white54,
+                              size: 24,
+                            ))
+                      ],
+                    ),
+                    const Column(
+                      children: [
+                        SizedBox(
+                          height: 20,
+                        ),
+                        getRandomSentence(),
+                        SizedBox(
+                          height: 40,
+                        ),
+                        //  CubePainter(),
+                        SizedBox(
+                          height: 40, //value : 240 for cube
+                        ),
+                        noteBox(),
+                        SizedBox(
+                          height: 120,
+                        ),
 
-                  //timercards(),
-                  SizedBox(
-                    height: 22,
-                  ),
-                  TimeOpstions(),
-                  SizedBox(
-                    height: 40,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      TimeController(),
-                      IconButton(
-                          onPressed: () =>
-                              Provider.of<TimerService>(context, listen: false)
-                                  .reset(),
-                          icon: const Icon(
-                            Icons.refresh,
-                            color: Colors.white54,
-                            size: 24,
-                          ))
-                    ],
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  getRandomSentence(),
-                  SizedBox(
-                    height: 40,
-                  ),
-                  //  CubePainter(),
-                  SizedBox(
-                    height: 40, //value : 240 for cube
-                  ),
-                  noteBox(),
-                  SizedBox(
-                    height: 120,
-                  ),
-
-                  ProgressWidget(),
-                ],
+                        ProgressWidget(),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

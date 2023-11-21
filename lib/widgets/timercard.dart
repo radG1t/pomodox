@@ -11,6 +11,7 @@ class TimerCard extends StatelessWidget {
     final provider = Provider.of<TimerService>(context);
     final secounds = provider.currentDuration % 60;
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Text(
           provider.currenState,
