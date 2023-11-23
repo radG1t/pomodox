@@ -27,7 +27,7 @@ Color OBJrednderColor(String currentState) {
   if (currentState == "Focus") {
     return Colors.lightBlue.shade900;
   } else {
-    return Colors.lightBlueAccent;
+    return Colors.red.shade800;
   }
 }
 
@@ -41,7 +41,6 @@ LinearGradient BCrenderColor(String currentState) {
         end: Alignment.bottomCenter,
         tileMode: TileMode.clamp);
   } else {
-    // You might want to return a default gradient or handle this case differently
     return const LinearGradient(
         colors: [
           Color.fromARGB(255, 4, 99, 30),

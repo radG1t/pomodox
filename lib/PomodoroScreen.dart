@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pomodox/timerservice.dart';
 import 'package:pomodox/utils.dart';
-import 'package:pomodox/widgets/customPaint.dart';
 import 'package:pomodox/widgets/magicCubes.dart';
 import 'package:pomodox/widgets/moreOptions.dart';
 import 'package:pomodox/widgets/notebox.dart';
@@ -20,15 +19,15 @@ class PomodoroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<TimerService>(context);
     return SafeArea(
-      child: Scaffold(
-        body: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          child: Expanded(
-            child: Container(
-              decoration:
-                  BoxDecoration(gradient: BCrenderColor(provider.currenState)),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(15, 50, 15, 20),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        child: Scaffold(
+          body: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                    gradient: BCrenderColor(provider.currenState)),
                 child: Column(
                   children: [
                     const Column(
@@ -86,6 +85,9 @@ class PomodoroScreen extends StatelessWidget {
                           height: 120,
                         ),
                         const ProgressWidget(),
+                        const SizedBox(
+                          height: 50,
+                        ),
                       ],
                     ),
                   ],

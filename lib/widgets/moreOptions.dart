@@ -42,7 +42,7 @@ class MoreOptions extends StatelessWidget {
       onTap: () {
         Scrollable.ensureVisible(
           context,
-          duration: const Duration(milliseconds: 650),
+          duration: const Duration(milliseconds: 590),
           curve: Curves.easeInOut,
         );
       },
@@ -55,10 +55,9 @@ class MoreOptions extends StatelessWidget {
             style: textStyle(14, Colors.white, FontWeight.w700),
           ),
           Container(
-            width: MediaQuery.sizeOf(context).width - 30,
-            height: 1.0, // Increased the height for better visibility
-            color: Colors.white, // Changed color to black
-            //   margin: const EdgeInsets.symmetric(horizontal: 16.0),
+            width: MediaQuery.sizeOf(context).width - 100,
+            height: 0.9,
+            color: Colors.white,
           ),
         ],
       ),
