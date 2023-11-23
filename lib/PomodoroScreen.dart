@@ -19,83 +19,81 @@ class PomodoroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<TimerService>(context);
     return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-        child: Scaffold(
-          body: SingleChildScrollView(
+      child: Scaffold(
+        body: Stack(children: [
+          Container(
+            //background
+            decoration:
+                BoxDecoration(gradient: BCrenderColor(provider.currenState)),
+          ),
+          SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
-            child: Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                    gradient: BCrenderColor(provider.currenState)),
-                child: Column(
+            child: Column(
+              children: [
+                const Column(
                   children: [
-                    const Column(
-                      children: [
-                        TimerCard(),
-                        magicCubes(),
-                        SizedBox(
-                          height: 22,
-                        ),
-                        TimeOpstions(),
-                        SizedBox(
-                          height: 40,
-                        ),
-                      ],
+                    TimerCard(),
+                    magicCubes(),
+                    SizedBox(
+                      height: 22,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const TimeController(),
-                        IconButton(
-                            onPressed: () => Provider.of<TimerService>(context,
-                                    listen: false)
-                                .reset(),
-                            icon: const Icon(
-                              Icons.refresh,
-                              color: Colors.white54,
-                              size: 24,
-                            ))
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        const getRandomSentence(),
-                        const SizedBox(
-                          height: 40,
-                        ),
-                        /* CubePainter(),
-                     SizedBox(
-                          height: 40, //value : 240 for cube
-                        ),
-                       */
-                        Row(
-                          children: [
-                            MoreOptions(),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 40, //value : 240 for cube
-                        ),
-                        const noteBox(),
-                        const SizedBox(
-                          height: 120,
-                        ),
-                        const ProgressWidget(),
-                        const SizedBox(
-                          height: 50,
-                        ),
-                      ],
+                    TimeOpstions(),
+                    SizedBox(
+                      height: 40,
                     ),
                   ],
                 ),
-              ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const TimeController(),
+                    IconButton(
+                        onPressed: () =>
+                            Provider.of<TimerService>(context, listen: false)
+                                .reset(),
+                        icon: const Icon(
+                          Icons.refresh,
+                          color: Colors.white54,
+                          size: 24,
+                        ))
+                  ],
+                ),
+                Column(
+                  children: [
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const getRandomSentence(),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    /* CubePainter(),
+                   SizedBox(
+                        height: 40, //value : 240 for cube
+                      ),
+                     */
+                    Row(
+                      children: [
+                        MoreOptions(),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 40, //value : 240 for cube
+                    ),
+                    const noteBox(),
+                    const SizedBox(
+                      height: 120,
+                    ),
+                    const ProgressWidget(),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
-        ),
+        ]),
       ),
     );
   }

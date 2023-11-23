@@ -6,7 +6,7 @@ class noteBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+      //  margin: const EdgeInsets.fromLTRB(15, 0, 15, 0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: const Color.fromRGBO(255, 255, 255, 0.498),
