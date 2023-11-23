@@ -59,34 +59,30 @@ class PomodoroScreen extends StatelessWidget {
                         ))
                   ],
                 ),
-                Column(
+                const Column(
                   children: [
-                    const SizedBox(
+                    SizedBox(
                       height: 20,
                     ),
-                    const getRandomSentence(),
-                    const SizedBox(
+                    getRandomSentence(),
+                    SizedBox(
                       height: 40,
                     ),
-                    /* CubePainter(),
-                   SizedBox(
-                        height: 40, //value : 240 for cube
-                      ),
-                     */
+                    /*
                     Row(
                       children: [
                         MoreOptions(),
                       ],
+                    ),*/
+                    SizedBox(
+                      height: 40,
                     ),
-                    const SizedBox(
-                      height: 40, //value : 240 for cube
-                    ),
-                    const noteBox(),
-                    const SizedBox(
+                    noteBox(),
+                    SizedBox(
                       height: 120,
                     ),
-                    const ProgressWidget(),
-                    const SizedBox(
+                    ProgressWidget(),
+                    SizedBox(
                       height: 50,
                     ),
                   ],

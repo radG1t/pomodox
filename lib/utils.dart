@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:math';
 
 TextStyle textStyle(double size, Color color, FontWeight fw) {
   return GoogleFonts.lato(fontSize: size, fontWeight: fw, color: color);
