@@ -5,6 +5,7 @@ import 'package:pomodox/widgets/magicCubes.dart';
 import 'package:pomodox/widgets/moreOptions.dart';
 import 'package:pomodox/widgets/notebox.dart';
 import 'package:pomodox/widgets/progresswidget.dart';
+import 'package:pomodox/widgets/randomS.dart';
 import 'package:pomodox/widgets/timecontroller.dart';
 import 'package:pomodox/widgets/timeoptions.dart';
 import 'package:pomodox/widgets/timercard.dart';

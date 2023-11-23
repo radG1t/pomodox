@@ -55,7 +55,9 @@ class MoreOptions extends StatelessWidget {
             style: textStyle(14, Colors.white, FontWeight.w700),
           ),
           Container(
-            width: MediaQuery.of(context).size.width < 600 ? 350.0 : 2.0,
+            width: MediaQuery.of(context).size.width < 500
+                ? 350.0
+                : 500.0, //*****/
             height: 0.9,
             color: Colors.white,
           ),
