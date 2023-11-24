@@ -31,18 +31,14 @@ class PomodoroScreen extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
-                const Column(
-                  children: [
-                    TimerCard(),
-                    magicCubes(),
-                    SizedBox(
-                      height: 22,
-                    ),
-                    TimeOpstions(),
-                    SizedBox(
-                      height: 40,
-                    ),
-                  ],
+                const TimerCard(),
+                const magicCubes(),
+                const SizedBox(
+                  height: 22,
+                ),
+                const TimeOpstions(),
+                const SizedBox(
+                  height: 40,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -59,33 +55,28 @@ class PomodoroScreen extends StatelessWidget {
                         ))
                   ],
                 ),
-                const Column(
+                const SizedBox(
+                  height: 20,
+                ),
+                const getRandomSentence(),
+                const SizedBox(
+                  height: 40,
+                ),
+                Row(
                   children: [
-                    SizedBox(
-                      height: 20,
-                    ),
-                    getRandomSentence(),
-                    SizedBox(
-                      height: 40,
-                    ),
-                    /*
-                    Row(
-                      children: [
-                        MoreOptions(),
-                      ],
-                    ),*/
-                    SizedBox(
-                      height: 40,
-                    ),
-                    noteBox(),
-                    SizedBox(
-                      height: 120,
-                    ),
-                    ProgressWidget(),
-                    SizedBox(
-                      height: 50,
-                    ),
+                    MoreOptions(),
                   ],
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                const noteBox(),
+                const SizedBox(
+                  height: 120,
+                ),
+                const ProgressWidget(),
+                const SizedBox(
+                  height: 50,
                 ),
               ],
             ),
