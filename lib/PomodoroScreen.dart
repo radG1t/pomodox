@@ -25,7 +25,7 @@ class PomodoroScreen extends StatelessWidget {
           Container(
             //background
             decoration:
-                BoxDecoration(gradient: BCrenderColor(provider.currenState)),
+                BoxDecoration(gradient: BCrenderColor(provider.currentState)),
           ),
           SingleChildScrollView(
             physics: const BouncingScrollPhysics(),

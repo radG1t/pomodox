@@ -36,7 +36,7 @@ class getRandomSentence extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (Provider.of<TimerService>(context).currenState == "Focus") {
+    if (Provider.of<TimerService>(context).currentState == "Focus") {
       return Text(
         workTimeSentences(),
         style: textStyle(22, Colors.white, FontWeight.w700),

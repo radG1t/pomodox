@@ -14,7 +14,7 @@ class TimerCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Text(
-          provider.currenState,
+          provider.currentState,
           style: textStyle(35, Colors.white, FontWeight.w600),
         ),
         const SizedBox(
@@ -44,7 +44,7 @@ class TimerCard extends StatelessWidget {
                   Text(
                     (provider.currentDuration ~/ 60)
                         .toString(), //61 -> 61~/60    61%60
-                    style: textStyle(70, OBJrednderColor(provider.currenState),
+                    style: textStyle(70, OBJrednderColor(provider.currentState),
                         FontWeight.bold),
                   ),
                   // const Expanded(
@@ -92,7 +92,7 @@ class TimerCard extends StatelessWidget {
                     secounds == 0
                         ? "${secounds.round()}0"
                         : (secounds % 60).round().toString(),
-                    style: textStyle(70, OBJrednderColor(provider.currenState),
+                    style: textStyle(70, OBJrednderColor(provider.currentState),
                         FontWeight.bold),
                   ),
                   const SizedBox(

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pomodox/PomodoroScreen.dart';
 import 'package:pomodox/timerservice.dart';
+import 'package:pomodox/utils.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(ChangeNotifierProvider<TimerService>(
@@ -15,7 +17,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final timerService = Provider.of<TimerService>(context);
+    Color navigationBarColor = timerService.currentState == "Focus"
+        ? BCrenderColor("Focus").colors[1]
+        : BCrenderColor("Break").colors[1];
+    Color statusBarColor = timerService.currentState == "Focus"
+        ? BCrenderColor("Focus").colors[0]
+        : BCrenderColor("Break").colors[0];
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      systemNavigationBarColor: navigationBarColor,
+      statusBarColor: statusBarColor,
+    ));
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: PomodoroScreen());
+      debugShowCheckedModeBanner: false,
+      home: PomodoroScreen(),
+    );
   }
 }

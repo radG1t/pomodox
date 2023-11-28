@@ -6,8 +6,7 @@ TextStyle textStyle(double size, Color color, FontWeight fw) {
 }
 
 List selectableTimes = [
-  //minutes in secounds
-
+  "0",
   '300',
   '600',
   '900',
@@ -26,7 +25,7 @@ Color OBJrednderColor(String currentState) {
   if (currentState == "Focus") {
     return Colors.lightBlue.shade900;
   } else {
-    return Colors.red.shade800;
+    return const Color.fromARGB(255, 40, 198, 93);
   }
 }
 
