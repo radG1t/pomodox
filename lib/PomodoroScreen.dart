@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pomodox/timerservice.dart';
 import 'package:pomodox/utils.dart';
+import 'package:pomodox/widgets/animation.dart';
 import 'package:pomodox/widgets/magicCubes.dart';
 import 'package:pomodox/widgets/moreOptions.dart';
 import 'package:pomodox/widgets/notebox.dart';
@@ -59,6 +60,10 @@ class PomodoroScreen extends StatelessWidget {
                   height: 20,
                 ),
                 const getRandomSentence(),
+                const SizedBox(
+                  height: 40,
+                ),
+                animation(),
                 const SizedBox(
                   height: 40,
                 ),

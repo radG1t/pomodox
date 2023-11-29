@@ -17,11 +17,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final timerService = Provider.of<TimerService>(context);
-    Color navigationBarColor = timerService.currentState == "Focus"
+    final provider = Provider.of<TimerService>(context);
+    Color navigationBarColor = provider.currentState == "Focus"
         ? BCrenderColor("Focus").colors[1]
         : BCrenderColor("Break").colors[1];
-    Color statusBarColor = timerService.currentState == "Focus"
+    Color statusBarColor = provider.currentState == "Focus"
         ? BCrenderColor("Focus").colors[0]
         : BCrenderColor("Break").colors[0];
 
