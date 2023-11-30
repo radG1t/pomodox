@@ -29,69 +29,67 @@ class PomodoroScreen extends StatelessWidget {
           ),
           SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
-            child: Column(
-              children: [
-                const TimerCard(),
-                // const timerBox(),
-                const SizedBox(
-                  height: 22,
-                ),
-                // const TimeOpstions(),
-                const SizedBox(
-                  height: 40,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    IconButton(
-                      onPressed: () =>
-                          Provider.of<TimerService>(context, listen: false)
-                              .reset(),
-                      icon: const Icon(
-                        Icons.refresh,
-                        color: Colors.white54,
-                        size: 28,
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(15, 30, 15, 25),
+              child: Column(
+                children: [
+                  const TimerCard(),
+                  // const timerBox(),
+                  const SizedBox(
+                    height: 22,
+                  ),
+                  // const TimeOpstions(),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      IconButton(
+                        onPressed: () =>
+                            Provider.of<TimerService>(context, listen: false)
+                                .reset(),
+                        icon: const Icon(
+                          Icons.refresh,
+                          color: Colors.white54,
+                          size: 28,
+                        ),
                       ),
-                    ),
-                    const TimeController(),
-                    IconButton(
-                      onPressed: () =>
-                          Provider.of<TimerService>(context, listen: false)
-                              .reset(),
-                      icon: const Icon(
-                        Icons.skip_next_rounded,
-                        color: Colors.white54,
-                        size: 28,
+                      const TimeController(),
+                      IconButton(
+                        onPressed: () =>
+                            Provider.of<TimerService>(context, listen: false),
+                        icon: const Icon(
+                          Icons.skip_next_rounded,
+                          color: Colors.white54,
+                          size: 28,
+                        ),
                       ),
-                    )
-                  ],
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const getRandomSentence(),
-                const SizedBox(
-                  height: 40,
-                ),
-                animation(),
-                const SizedBox(
-                  height: 40,
-                ),
-                //MoreOptions(),
-
-                const noteBox(),
-                const SizedBox(
-                  height: 40,
-                ),
-                const TimeOpstions(),
-                const SizedBox(
-                  height: 120,
-                ),
-                const ProgressWidget(),
-                const SizedBox(
-                  height: 5,
-                ),
-              ],
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const getRandomSentence(),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  animation(),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  //MoreOptions(),
+                  const noteBox(),
+                  const SizedBox(
+                    height: 80,
+                  ),
+                  const TimeOpstions(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const ProgressWidget(),
+                ],
+              ),
             ),
           ),
         ]),
