@@ -36,23 +36,34 @@ class PomodoroScreen extends StatelessWidget {
                 const SizedBox(
                   height: 22,
                 ),
-                const TimeOpstions(),
+                // const TimeOpstions(),
                 const SizedBox(
                   height: 40,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    IconButton(
+                      onPressed: () =>
+                          Provider.of<TimerService>(context, listen: false)
+                              .reset(),
+                      icon: const Icon(
+                        Icons.refresh,
+                        color: Colors.white54,
+                        size: 28,
+                      ),
+                    ),
                     const TimeController(),
                     IconButton(
-                        onPressed: () =>
-                            Provider.of<TimerService>(context, listen: false)
-                                .reset(),
-                        icon: const Icon(
-                          Icons.refresh,
-                          color: Colors.white54,
-                          size: 24,
-                        ))
+                      onPressed: () =>
+                          Provider.of<TimerService>(context, listen: false)
+                              .reset(),
+                      icon: const Icon(
+                        Icons.skip_next_rounded,
+                        color: Colors.white54,
+                        size: 28,
+                      ),
+                    )
                   ],
                 ),
                 const SizedBox(
@@ -66,15 +77,13 @@ class PomodoroScreen extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                Row(
-                  children: [
-                    MoreOptions(),
-                  ],
-                ),
+                //MoreOptions(),
+
+                const noteBox(),
                 const SizedBox(
                   height: 40,
                 ),
-                const noteBox(),
+                const TimeOpstions(),
                 const SizedBox(
                   height: 120,
                 ),

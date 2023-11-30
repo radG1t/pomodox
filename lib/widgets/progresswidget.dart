@@ -35,12 +35,12 @@ class ProgressWidget extends StatelessWidget {
             Text(
               'Round',
               style: textStyle(16, const Color.fromARGB(255, 226, 226, 226),
-                  FontWeight.bold),
+                  FontWeight.w400),
             ),
             Text(
               'Goal   ',
               style: textStyle(16, const Color.fromARGB(255, 226, 226, 226),
-                  FontWeight.bold),
+                  FontWeight.w400),
             ),
           ],
         ),

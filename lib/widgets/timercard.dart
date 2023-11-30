@@ -138,7 +138,7 @@ class TimerCard extends StatelessWidget {
           ]),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             provider.currentState,
@@ -147,66 +147,51 @@ class TimerCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        (provider.currentDuration ~/ 60)
-                            .toString(), //61 -> 61~/60    61%60
-                        style: textStyle(
-                            70,
-                            OBJrednderColor(provider.currentState),
-                            FontWeight.bold),
-                      ),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                      Text(
-                        'Min',
-                        style: textStyle(
-                            12, Colors.grey.shade200, FontWeight.w300),
-                      ),
-                    ],
-                  ),
-                  Text(
-                    ':',
-                    style: textStyle(65, Colors.white, FontWeight.bold),
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        secounds == 0
-                            ? "${secounds.round()}0"
-                            : (secounds % 60).round().toString(),
-                        style: textStyle(
-                            70,
-                            OBJrednderColor(provider.currentState),
-                            FontWeight.bold),
-                      ),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                      Text(
-                        'Sec',
-                        style: textStyle(
-                            12, Colors.grey.shade200, FontWeight.w300),
-                      ),
-                    ],
-                  ),
-                ],
+              Text(
+                (provider.currentDuration ~/ 60)
+                    .toString(), //61 -> 61~/60    61%60
+                style: textStyle(70, OBJrednderColor(provider.currentState),
+                    FontWeight.bold),
+              ),
+              Text(
+                ':',
+                style: textStyle(65, Colors.white, FontWeight.bold),
+              ),
+              Text(
+                secounds == 0
+                    ? "${secounds.round()}0"
+                    : (secounds % 60).round().toString(),
+                style: textStyle(70, OBJrednderColor(provider.currentState),
+                    FontWeight.bold),
               ),
               const SizedBox(
-                width: 10,
-              ),
-              const SizedBox(
-                width: 10,
+                height: 25,
               ),
             ],
+          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // sec num
+              Text(
+                'Min',
+                style: textStyle(12, Colors.grey.shade200, FontWeight.w300),
+              ),
+              const SizedBox(
+                width: 85,
+              ),
+              Text(
+                'Sec',
+                style: textStyle(12, Colors.grey.shade200, FontWeight.w300),
+              ),
+            ],
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+          const SizedBox(
+            width: 10,
           )
         ],
       ),

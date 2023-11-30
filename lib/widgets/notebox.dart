@@ -24,8 +24,8 @@ class noteBox extends StatelessWidget {
         autofillHints: Characters.empty,
         decoration: InputDecoration(
           floatingLabelBehavior: FloatingLabelBehavior.never,
-          labelText: ' any note :',
-          labelStyle: TextStyle(color: Colors.black38),
+          labelText: ' what do u want to do ?',
+          labelStyle: TextStyle(color: Colors.black38, fontSize: 14),
           border: InputBorder.none,
         ),
         maxLines: null,
