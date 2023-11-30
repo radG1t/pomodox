@@ -33,7 +33,7 @@ class PomodoroScreen extends StatelessWidget {
             child: Column(
               children: [
                 const TimerCard(),
-                const magicCubes(),
+                // const timerBox(),
                 const SizedBox(
                   height: 22,
                 ),

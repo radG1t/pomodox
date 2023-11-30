@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pomodox/widgets/timercard.dart';
 
-class magicCubes extends StatelessWidget {
-  const magicCubes({super.key});
+class timerBox extends StatelessWidget {
+  const timerBox({super.key});
 
   @override
   Widget build(BuildContext context) {
