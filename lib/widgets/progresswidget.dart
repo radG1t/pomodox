@@ -21,13 +21,13 @@ class ProgressWidget extends StatelessWidget {
             ),
             Text(
               '${provider.goal}/12',
-              style: textStyle(
-                  18, Color.fromARGB(255, 226, 226, 226), FontWeight.bold),
+              style: textStyle(18, const Color.fromARGB(255, 226, 226, 226),
+                  FontWeight.bold),
             ),
           ],
         ),
         const SizedBox(
-          height: 10,
+          height: 5,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

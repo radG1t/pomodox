@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pomodox/timerservice.dart';
 import 'package:pomodox/utils.dart';
 import 'package:pomodox/widgets/animation.dart';
-import 'package:pomodox/widgets/magicCubes.dart';
 import 'package:pomodox/widgets/moreOptions.dart';
 import 'package:pomodox/widgets/notebox.dart';
 import 'package:pomodox/widgets/progresswidget.dart';
@@ -81,7 +80,7 @@ class PomodoroScreen extends StatelessWidget {
                 ),
                 const ProgressWidget(),
                 const SizedBox(
-                  height: 50,
+                  height: 5,
                 ),
               ],
             ),
