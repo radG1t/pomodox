@@ -30,7 +30,7 @@ class PomodoroScreen extends StatelessWidget {
           SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(15, 30, 15, 25),
+              padding: const EdgeInsets.fromLTRB(15, 10, 15, 25),
               child: Column(
                 children: [
                   const TimerCard(),
@@ -43,7 +43,7 @@ class PomodoroScreen extends StatelessWidget {
                     height: 40,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
                         onPressed: () =>
@@ -55,24 +55,35 @@ class PomodoroScreen extends StatelessWidget {
                           size: 28,
                         ),
                       ),
-                      const TimeController(),
+                      const SizedBox(
+                        width: 40,
+                      ),
+                      const Column(
+                        children: [
+                          TimeController(),
+                          SizedBox(
+                            height: 30,
+                          )
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 40,
+                      ),
                       IconButton(
-                        onPressed: () =>
-                            Provider.of<TimerService>(context, listen: false),
+                        // selectTime = 300;
+                        onPressed: () {},
                         icon: const Icon(
                           Icons.skip_next_rounded,
-                          color: Colors.white54,
+                          color: Colors.white60,
                           size: 28,
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+
                   const getRandomSentence(),
                   const SizedBox(
-                    height: 40,
+                    height: 20,
                   ),
                   animation(),
                   const SizedBox(
@@ -85,7 +96,7 @@ class PomodoroScreen extends StatelessWidget {
                   ),
                   const TimeOpstions(),
                   const SizedBox(
-                    height: 20,
+                    height: 40,
                   ),
                   const ProgressWidget(),
                 ],
