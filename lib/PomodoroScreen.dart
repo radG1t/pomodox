@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:pomodox/timerservice.dart';
+import 'package:pomodox/timerService.dart';
 import 'package:pomodox/utils.dart';
 import 'package:pomodox/widgets/animation.dart';
-import 'package:pomodox/widgets/notebox.dart';
-import 'package:pomodox/widgets/progresswidget.dart';
+import 'package:pomodox/widgets/noteBox.dart';
+import 'package:pomodox/widgets/progressWidget.dart';
 import 'package:pomodox/widgets/randomS.dart';
-import 'package:pomodox/widgets/timecontroller.dart';
-import 'package:pomodox/widgets/timeoptions.dart';
-import 'package:pomodox/widgets/timercard.dart';
+import 'package:pomodox/widgets/timeController.dart';
+import 'package:pomodox/widgets/timeOptions.dart';
+import 'package:pomodox/widgets/timerCard.dart';
 import 'package:provider/provider.dart';
 
 //          decoration:

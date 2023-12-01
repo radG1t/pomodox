@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pomodox/timerservice.dart';
+import 'package:pomodox/timerService.dart';
 import 'package:pomodox/utils.dart';
 import 'package:provider/provider.dart';
 

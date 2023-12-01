@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pomodox/PomodoroScreen.dart';
-import 'package:pomodox/timerservice.dart';
+import 'package:pomodox/timerService.dart';
 import 'package:pomodox/utils.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pomodox/widgets/timercard.dart';
+import 'package:pomodox/widgets/timerCard.dart';
 
 class timerBox extends StatelessWidget {
   const timerBox({super.key});
