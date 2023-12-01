@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pomodox/timerservice.dart';
 import 'package:pomodox/utils.dart';
 import 'package:pomodox/widgets/animation.dart';
-import 'package:pomodox/widgets/moreOptions.dart';
 import 'package:pomodox/widgets/notebox.dart';
 import 'package:pomodox/widgets/progresswidget.dart';
 import 'package:pomodox/widgets/randomS.dart';
@@ -13,6 +12,7 @@ import 'package:provider/provider.dart';
 
 //          decoration:
 //      BoxDecoration(gradient: BCrenderColor(provider.currenState)),
+
 class PomodoroScreen extends StatelessWidget {
   const PomodoroScreen({super.key});
 
@@ -35,12 +35,9 @@ class PomodoroScreen extends StatelessWidget {
                 children: [
                   const TimerCard(),
                   // const timerBox(),
+
                   const SizedBox(
-                    height: 22,
-                  ),
-                  // const TimeOpstions(),
-                  const SizedBox(
-                    height: 40,
+                    height: 30,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -56,7 +53,7 @@ class PomodoroScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        width: 40,
+                        width: 20,
                       ),
                       const Column(
                         children: [
@@ -67,7 +64,7 @@ class PomodoroScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(
-                        width: 40,
+                        width: 20,
                       ),
                       IconButton(
                         // selectTime = 300;
@@ -82,18 +79,13 @@ class PomodoroScreen extends StatelessWidget {
                   ),
 
                   const getRandomSentence(),
-                  const SizedBox(
-                    height: 20,
-                  ),
                   animation(),
-                  const SizedBox(
-                    height: 40,
-                  ),
                   //MoreOptions(),
                   const noteBox(),
                   const SizedBox(
                     height: 80,
                   ),
+
                   const TimeOpstions(),
                   const SizedBox(
                     height: 40,

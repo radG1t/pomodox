@@ -25,7 +25,7 @@ Color OBJrednderColor(String currentState) {
   if (currentState == "Focus") {
     return Colors.lightBlue.shade900;
   } else {
-    return const Color.fromARGB(255, 40, 198, 93);
+    return Color.fromARGB(255, 57, 179, 98);
   }
 }
 
@@ -41,11 +41,13 @@ LinearGradient BCrenderColor(String currentState) {
   } else {
     return const LinearGradient(
         colors: [
-          Color.fromARGB(255, 4, 99, 30),
-          Color.fromARGB(255, 92, 126, 101)
+          // Color.fromARGB(255, 4, 99, 30),
+          // Color.fromARGB(255, 92, 126, 101)
+          Color.fromARGB(255, 92, 126, 101),
+          Colors.black26
         ],
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
-        tileMode: TileMode.clamp);
+        tileMode: TileMode.decal);
   }
 }
