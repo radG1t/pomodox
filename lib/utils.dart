@@ -6,7 +6,6 @@ TextStyle textStyle(double size, Color color, FontWeight fw) {
 }
 
 List selectableTimes = [
-  "0",
   '300',
   '600',
   '900',

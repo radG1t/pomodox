@@ -23,7 +23,6 @@ class PomodoroScreen extends StatelessWidget {
       child: Scaffold(
         body: Stack(children: [
           Container(
-            //background
             decoration:
                 BoxDecoration(gradient: BCrenderColor(provider.currentState)),
           ),
@@ -35,49 +34,10 @@ class PomodoroScreen extends StatelessWidget {
                 children: [
                   const TimerCard(),
                   // const timerBox(),
-
                   const SizedBox(
                     height: 30,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton(
-                        onPressed: () =>
-                            Provider.of<TimerService>(context, listen: false)
-                                .reset(),
-                        icon: const Icon(
-                          Icons.refresh,
-                          color: Colors.white54,
-                          size: 28,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      const Column(
-                        children: [
-                          TimeController(),
-                          SizedBox(
-                            height: 30,
-                          )
-                        ],
-                      ),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      IconButton(
-                        // selectTime = 300;
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.skip_next_rounded,
-                          color: Colors.white60,
-                          size: 28,
-                        ),
-                      ),
-                    ],
-                  ),
-
+                  TimeControllers(),
                   const getRandomSentence(),
                   animation(),
                   //MoreOptions(),
