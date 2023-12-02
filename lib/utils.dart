@@ -24,7 +24,7 @@ Color OBJrednderColor(String currentState) {
   if (currentState == "Focus") {
     return Colors.lightBlue.shade900;
   } else {
-    return Color.fromARGB(255, 57, 179, 98);
+    return const Color.fromARGB(255, 57, 179, 98);
   }
 }
 

@@ -96,7 +96,7 @@ class TimerCard extends StatelessWidget {
               ),
               const SizedBox(
                 width: 10,
-              )
+              ),
             ],
           ),
         ),

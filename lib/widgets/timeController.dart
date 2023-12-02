@@ -59,7 +59,7 @@ class _TimeControllersState extends State<TimeControllers> {
             ),
             const SizedBox(
               height: 30,
-            )
+            ),
           ],
         ),
         const SizedBox(

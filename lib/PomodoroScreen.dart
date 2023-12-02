@@ -4,7 +4,7 @@ import 'package:pomodox/utils.dart';
 import 'package:pomodox/widgets/animation.dart';
 import 'package:pomodox/widgets/noteBox.dart';
 import 'package:pomodox/widgets/progressWidget.dart';
-import 'package:pomodox/widgets/randomS.dart';
+import 'package:pomodox/widgets/randomSentences.dart';
 import 'package:pomodox/widgets/timeController.dart';
 import 'package:pomodox/widgets/timeOptions.dart';
 import 'package:pomodox/widgets/timerCard.dart';
@@ -37,7 +37,7 @@ class PomodoroScreen extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  TimeControllers(),
+                  const TimeControllers(),
                   const getRandomSentence(),
                   animation(),
                   //MoreOptions(),
