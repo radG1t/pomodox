@@ -15,7 +15,6 @@ import 'package:provider/provider.dart';
 
 class PomodoroScreen extends StatelessWidget {
   const PomodoroScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<TimerService>(context);
@@ -38,7 +37,8 @@ class PomodoroScreen extends StatelessWidget {
                     height: 30,
                   ),
                   const TimeControllers(),
-                  const getRandomSentence(),
+                  //   const getRandomSentence(),
+                  const randshit(),
                   animation(),
                   //MoreOptions(),
                   const noteBox(),

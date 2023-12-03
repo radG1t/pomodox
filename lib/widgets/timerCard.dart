@@ -62,9 +62,11 @@ class TimerCard extends StatelessWidget {
                     width: 10,
                   ),
                   Text(
+                    // check it later
                     secounds == 0
                         ? "${secounds.round()}0"
                         : (secounds % 60).round().toString(),
+
                     style: textStyle(70, OBJrednderColor(provider.currentState),
                         FontWeight.bold),
                   ),
