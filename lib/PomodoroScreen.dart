@@ -32,20 +32,16 @@ class PomodoroScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const TimerCard(),
-                  // const timerBox(),
                   const SizedBox(
                     height: 30,
                   ),
                   const TimeControllers(),
-                  //   const getRandomSentence(),
-                  const randshit(),
+                  sentence(),
                   animation(),
-                  //MoreOptions(),
                   const noteBox(),
                   const SizedBox(
                     height: 80,
                   ),
-
                   const TimeOpstions(),
                   const SizedBox(
                     height: 40,

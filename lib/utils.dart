@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pomodox/timerService.dart';
+import 'package:provider/provider.dart';
 
 TextStyle textStyle(double size, Color color, FontWeight fw) {
   return GoogleFonts.lato(fontSize: size, fontWeight: fw, color: color);
@@ -48,5 +50,25 @@ LinearGradient BCrenderColor(String currentState) {
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         tileMode: TileMode.decal);
+  }
+}
+
+class sentence extends StatelessWidget {
+  sentence({super.key});
+  @override
+  Widget build(BuildContext context) {
+    final provider = Provider.of<TimerService>(context, listen: false);
+    bool randomS = provider.currentState == "Focus" ? true : false;
+    return Container(
+      child: randomS
+          ? Text(
+              'Stay focused',
+              style: textStyle(22, Colors.white, FontWeight.w700),
+            )
+          : Text(
+              'Take a deep breath',
+              style: textStyle(22, Colors.white, FontWeight.w700),
+            ),
+    );
   }
 }
