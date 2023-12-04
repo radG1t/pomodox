@@ -18,9 +18,8 @@ class PomodoroScreen extends StatelessWidget {
       child: Scaffold(
         body: Stack(children: [
           Container(
-            decoration:
-                BoxDecoration(gradient: BCrenderColor(provider.currentState)),
-          ),
+              decoration: BoxDecoration(
+                  gradient: BCrenderColor(provider.currentState))),
           SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Padding(
@@ -28,20 +27,14 @@ class PomodoroScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const TimerCard(),
-                  const SizedBox(
-                    height: 30,
-                  ),
+                  const SizedBox(height: 30),
                   const TimeControllers(),
-                  sentence(),
+                  sentences(),
                   animation(),
                   const noteBox(),
-                  const SizedBox(
-                    height: 80,
-                  ),
+                  const SizedBox(height: 80),
                   const TimeOpstions(),
-                  const SizedBox(
-                    height: 40,
-                  ),
+                  const SizedBox(height: 40),
                   const ProgressWidget(),
                 ],
               ),

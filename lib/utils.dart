@@ -53,22 +53,48 @@ LinearGradient BCrenderColor(String currentState) {
   }
 }
 
-class sentence extends StatelessWidget {
-  sentence({super.key});
+class sentences extends StatelessWidget {
+  sentences({super.key});
+
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<TimerService>(context, listen: false);
-    bool randomS = provider.currentState == "Focus" ? true : false;
-    return Container(
-      child: randomS
-          ? Text(
-              'Stay focused',
-              style: textStyle(22, Colors.white, FontWeight.w700),
-            )
-          : Text(
-              'Take a deep breath',
-              style: textStyle(22, Colors.white, FontWeight.w700),
-            ),
-    );
+    if (provider.currentState == "Focus") {
+      return Text(
+        'Stay Focused',
+        style: textStyle(22, Colors.white, FontWeight.w700),
+      );
+    } else if (provider.currentState == "Break") {
+      return Text(
+        'Take a deep breath',
+        style: textStyle(22, Colors.white, FontWeight.w700),
+      );
+    } else {
+      return Text(
+        'Realx and Recharge',
+        style: textStyle(22, Colors.white, FontWeight.w700),
+      );
+    }
   }
 }
+
+
+// class sentence extends StatelessWidget {
+//   sentence({super.key});
+//   @override
+//   Widget build(BuildContext context) {
+//     final provider = Provider.of<TimerService>(context, listen: false);
+//     bool randomS = provider.currentState == "Focus" ? true : false;
+//     return Container(
+//       child: randomS
+//           ? Text(
+//               'Stay focused',
+//               style: textStyle(22, Colors.white, FontWeight.w700),
+//             )
+//           : Text(
+//               'Take a deep breath',
+//               style: textStyle(22, Colors.white, FontWeight.w700),
+//             ),
+//     );
+//   }
+// }

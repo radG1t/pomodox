@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
     Color statusBarColor = provider.currentState == "Focus"
         ? BCrenderColor("Focus").colors[0]
         : BCrenderColor("Break").colors[0];
-
+    // SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
+    //SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       systemNavigationBarColor: navigationBarColor,
       statusBarColor: statusBarColor,

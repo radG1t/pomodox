@@ -38,9 +38,9 @@ dependencies:
   provider: ^6.0.5
   google_fonts: ^6.1.0
   lottie: ^2.7.0
-  vibration: ^1.8.4
-  introduction_screen: ^3.1.12
-  shared_preferences: ^2.2.2
+#  vibration: ^1.8.4
+#  introduction_screen: ^3.1.12
+#  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
