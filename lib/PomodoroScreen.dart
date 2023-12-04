@@ -4,14 +4,10 @@ import 'package:pomodox/utils.dart';
 import 'package:pomodox/widgets/animation.dart';
 import 'package:pomodox/widgets/noteBox.dart';
 import 'package:pomodox/widgets/progressWidget.dart';
-import 'package:pomodox/widgets/randomSentences.dart';
 import 'package:pomodox/widgets/timeController.dart';
 import 'package:pomodox/widgets/timeOptions.dart';
 import 'package:pomodox/widgets/timerCard.dart';
 import 'package:provider/provider.dart';
-
-//          decoration:
-//      BoxDecoration(gradient: BCrenderColor(provider.currenState)),
 
 class PomodoroScreen extends StatelessWidget {
   const PomodoroScreen({super.key});
