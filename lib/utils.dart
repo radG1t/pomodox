@@ -83,8 +83,7 @@ class sentences extends StatelessWidget {
       );
     }
   }
-}
-
+} 
 
 // class sentence extends StatelessWidget {
 //   sentence({super.key});

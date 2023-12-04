@@ -18,12 +18,29 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<TimerService>(context);
-    Color navigationBarColor = provider.currentState == "Focus"
-        ? BCrenderColor("Focus").colors[1]
-        : BCrenderColor("Break").colors[1];
-    Color statusBarColor = provider.currentState == "Focus"
-        ? BCrenderColor("Focus").colors[0]
-        : BCrenderColor("Break").colors[0];
+
+    // Color navigationBarColor = provider.currentState == "Focus"
+    //     ? BCrenderColor("Focus").colors[1]
+    //     : BCrenderColor("Break").colors[1];
+    // Color statusBarColor = provider.currentState == "Focus"
+    //     ? BCrenderColor("Focus").colors[0]
+    //     : BCrenderColor("Break").colors[0];
+
+    Color navigationBarColor;
+    Color statusBarColor;
+
+    if (provider.currentState == "Focus") {
+      navigationBarColor = BCrenderColor("Focus").colors[1];
+      statusBarColor = BCrenderColor("Focus").colors[0];
+    } else if (provider.currentState == "Break") {
+      navigationBarColor = BCrenderColor("Break").colors[1];
+      statusBarColor = BCrenderColor("Break").colors[0];
+    } else {
+      // Add your third condition here
+      navigationBarColor = BCrenderColor("longBreak").colors[1];
+      statusBarColor = BCrenderColor("longBreak").colors[0];
+    }
+
     // SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
     //SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
