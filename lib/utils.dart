@@ -25,27 +25,34 @@ List selectableTimes = [
 Color OBJrednderColor(String currentState) {
   if (currentState == "Focus") {
     return Colors.lightBlue.shade900;
+  } else if (currentState == "Break") {
+    return Color.fromARGB(255, 43, 134, 74);
   } else {
-    return const Color.fromARGB(255, 57, 179, 98);
+    return Colors.orange;
   }
 }
 
 LinearGradient BCrenderColor(String currentState) {
   if (currentState == "Focus") {
-    Color bluenova = const Color(0xFF001F3F);
-    Color somebluenova = const Color.fromARGB(255, 7, 79, 151);
-    return LinearGradient(
-        colors: [somebluenova, bluenova],
+    return const LinearGradient(
+        colors: [Color.fromARGB(255, 7, 79, 151), Color(0xFF001F3F)],
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         tileMode: TileMode.clamp);
-  } else {
+  } else if (currentState == "Break") {
     return const LinearGradient(
         colors: [
-          // Color.fromARGB(255, 4, 99, 30),
-          // Color.fromARGB(255, 92, 126, 101)
-          Color.fromARGB(255, 92, 126, 101),
-          Colors.black26
+          Color.fromARGB(255, 42, 167, 75),
+          Color.fromARGB(255, 72, 99, 79),
+        ],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        tileMode: TileMode.decal);
+  } else {
+    return LinearGradient(
+        colors: [
+          Colors.yellow.shade400,
+          Colors.deepOrange,
         ],
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,

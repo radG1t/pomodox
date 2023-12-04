@@ -13,11 +13,10 @@ class animation extends StatelessWidget {
     double animationHeight = provider.currentState == "Focus" ? 30 : 0;
     return Column(
       children: [
-        SizedBox(
-          height: animationHeight,
-        ),
+        SizedBox(height: animationHeight),
         Lottie.asset(
           'assets/$animationName.json',
+          // 'assets/longBreak.json',
           width: 300,
           height: 300,
           fit: BoxFit.fill,
