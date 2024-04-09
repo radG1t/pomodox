@@ -1,8 +1,11 @@
 # pomodox
 an Android application based on Pomodoro technique,
-available on Bazar
+available on **Bazar** :
 
-**Here is some pics from about app :**
+https://cafebazaar.ir/app/com.example.pomodox
+
+
+**Take a look :**
 
 ![image](https://github.com/radG1t/pomodox/assets/110737910/5e71b529-d922-4fc1-b6e0-b0523f8bc55a)
 
